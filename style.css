@@ -1,0 +1,101 @@
+/* My CSS Code */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark gray text color */
+}
+
+header {
+    background-color: #007bff; /* Blue header background */
+    color: #fff; /* White text color */
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #fd7e14; /* Orange navbar background */
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff; /* White text color */
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+nav a:hover {
+    background-color: #ff9500; /* Darker orange on hover */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff; /* White dropdown background */
+    min-width: 100px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Soft shadow */
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333; /* Dark gray text color */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.dropdown-content a:hover {
+    background-color: #f8f9fa; /* Light gray on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff; /* White section background */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
+}
+
+footer {
+    background-color: #007bff; /* Blue footer background */
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #dee2e6; /* Light gray border */
+}
+
+th, td {
+    padding: 15px; /* Increased padding */
+    text-align: left;
+}
+
+th {
+    background-color: #fd7e14; /* Orange table header background */
+    color: #fff; /* White text color */
+}
