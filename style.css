@@ -9,14 +9,14 @@ body {
 }
 
 header {
-    background-color: #007bff; /* Blue header background */
+    background-color: #0e5022; /* Blue header background */
     color: #fff; /* White text color */
     padding: 20px;
     text-align: center;
 }
 
 nav {
-    background-color: #fd7e14; /* Orange navbar background */
+    background-color: #04220a; /* Orange navbar background */
     padding: 10px;
     text-align: center;
 }
@@ -73,7 +73,7 @@ section {
 }
 
 footer {
-    background-color: #007bff; /* Blue footer background */
+    background-color: #0e5022; /* Blue footer background */
     color: #fff; /* White text color */
     text-align: center;
     padding: 10px;
