@@ -11,8 +11,8 @@
 <body>
 
   <header>
-    <h1><img src="hulk_code.jpeg" alt="Hulk Coding" width="173" height="173">&nbsp&nbsp&nbsp&nbsp&nbspAnthony Perez&nbsp&nbsp&nbsp&nbsp&nbsp<img src="hulk_code.jpeg" alt="Hulk Coding" width="173" height="173"></h1>
-    <h2>A Look Into The Genius...and The Genius</h2>
+    <h1><img src="hulk_code.jpeg" alt="Hulk Coding" width="173" height="173">&nbsp&nbsp&nbsp&nbsp&nbsp Anthony Perez &nbsp &nbsp &nbsp &nbsp &nbsp<img src="hulk_code.jpeg" alt="Hulk Coding" width="173" height="173"></h1>;
+    <h2>A Look Into The Genius...and The Genius</h2>;
   </header>
 
   <nav>
@@ -20,6 +20,8 @@
     <a href="#background">Background and Education</a>
     <a href="#interests">Interests and Hobbies</a>
     <a href="#experience">Professional Experience</a>
+    <a href="#submit">Submit Your Information</a><br><br>
+    <a href="#someMath">Calculate Your Monthly Mortage Payment</a>
   </nav>
   <center>
   <h2><img src="hulk_gif.gif" alt="Hulk Gif" width="173" height="173"><img src="hulk_gif.gif" alt="Hulk Gif" width="173" height="173"><img src="hulk_gif.gif" alt="Hulk Gif" width="173" height="173"><img src="hulk_gif.gif" alt="Hulk Gif" width="173" height="173"></h2>
@@ -43,7 +45,7 @@
     <p>Click the button below to visually explore my interests.</p>
 
     <div class="dropdown">
-      <button class="dropbtn">My Interests</button>
+      <button id="interestBtn" class="dropbtn">My Interests</button>
       <div class="dropdown-content">
         <a href="hulk_guitar.jpeg">Playing Guitar <img src="hulk_guitar.jpeg" alt="Hulk Playing Guitar" width="173" height="173"></a>
         <a href="hulk_keyboard.jpeg">Playing Keyboard <img src="hulk_keyboard.jpeg" alt="Hulk Playing Kayboard" width="173" height="173"></a>
@@ -62,7 +64,7 @@
     </section>
 
     <section>
-      <h2>If you would like to reach me, please leave your information below.</h2>
+      <h2 id="submit">If you would like to reach me, please leave your information below.</h2>
       <form>
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name"><br>
@@ -70,19 +72,51 @@
         <input type="text" id="email" name="email"><br>
         <label for="number">Phone Number:</label><br>
         <input type="text" id="number" name="number"><br><br>
-        <input type="submit" value="Submit">
+        <input id="submitBtn" type="submit" value="SMASH To Submit Your Information">
       </form>
     </section>
 
     <section>
       <h2>Until we meet, remember...DANCE!</h2>
       <center>
-        <img src="hulk_dance.webp" alt="Hulk Dnacings" width="300" height="300">
+        <img src="hulk_dance.webp" alt="Hulk Dancing" width="300" height="300">
       </center>
+    </section>
+
+    <section>
+      <h2 href="someMath">For Those Interested in Buying A Home</h2>
+      <p>Just enter the following information, and your monthly mortgage payment will be calculated.</p>
+      <form>
+        <label for="principal">Principal:</label><br>
+        <input type="number" id="principal" name="principal" value="500000"><br>
+        <label for="interestRate">Interest Rate:</label><br>
+        <input type="number" id="interestRate" name="interestRate" value="30"><br>
+        <label for="term">Term (In Months):</label><br>
+        <input type="number" id="term" name="term" value="360"><br><br>
+        <input onclick="determinePayment()" id="turnIn" type="button" value="Find Your Payment"><br><br>
+        <label for="monthlyPayment">Monthly Payment:</label>
+        <input id="monthlyPayment" type="number" value="0">
+      </form>
     </section>
   <footer>
     <p>2024 Created by Anthony Perez. All rights reserved.</p>
   </footer>
+  <script type="text/javascript">
+    let principal = document.getElementById("principal");
+    let interestRate = document.getElementById("interestRate");
+    let term = document.getElementById("term");
+    let monthlyPayment = document.getElementById("monthlyPayment");
+    
+    function determinePayment() {
+      principal = Number(principal.value)
+      interestRate = Number(interestRate.value)/1200
+      term = Number(term.value)
+      numerator = principal * interestRate* (1 + interestRate)**(term)
+      denominator = (1 + interestRate)**(term) - 1
+      monthlyPayment.value = numerator / denominator
+    }
+
+  </script>  
 </body>
   
 </html>
