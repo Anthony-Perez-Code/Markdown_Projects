@@ -24,6 +24,7 @@ nav {
 nav a {
     color: #fff; /* White text color */
     text-decoration: none;
+    display: block;
     padding: 10px 20px;
     margin: 0 5px;
     border-radius: 10px; /* Rounded corners */
